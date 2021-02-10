@@ -1,0 +1,19 @@
+Questions "make"
+
+1. What is the meaning of the following makefile variables: 
+	$@: automatic variable - object file name of the target of the rule
+	$<: automatic variable - source file name, name of the first prerequisite
+	$^: automatic variable - names of all prerequisites (spaces between them)
+	CFLAGS: implicit variable - argument for the program given to the compiler, set of flags with rules for the program
+	LDFLAGS: implicit variable - flags calling the linker 
+	LDLIBS: implicit variable - library flags calling the linker
+
+2. What will the makefile print (after running command make) and why?
+	CFLAGS
+	FFLAGS
+	FFLAGS
+	-Wall -Ofast -std=c1x
+	
+3. Suppose you have your whole C-program in one file main.c. Which of the makefiles will compile and link the program into the executable file main?
+	1, 2, 3, 4, 5, 7, 8, 9
+	number 6 only reads the first line and therefore doesnt create the executable
