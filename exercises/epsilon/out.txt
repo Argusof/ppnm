@@ -1,0 +1,40 @@
+
+----------- EXERCISE 1 -----------
+
+Maximum representable integer
+my max int = 2147483647 (while)
+my max int = 2147483647 (for)
+my max int = 2147483647 (do while)
+INT_MAX = 2147483647 (limits.h)
+
+Minimum representable integer
+my min int = -2147483648 (while)
+my max int = -2147483648 (for)
+my max int = -2147483648 (do while)
+INT_MIN = -2147483648 (limits.h)
+
+The machine epsilon
+DOUBLE
+e=9.881312917e-324 (while)
+e=4.940656458e-324 (for)
+e=9.881312917e-324 (do)
+
+FLOAT
+e=2.802596929e-45 (while)
+e=1.401298464e-45 (for)
+e=2.802596929e-45 (do)
+
+LONG DOUBLE
+e=7.290399064e-4951 (while)
+e=7.290399064e-4951 (for)
+e=7.290399064e-4951 (do)
+
+----------- EXERCISE 2 -----------
+
+Sums calculated using float
+sum up = 15.403683
+sum down = 18.807919
+
+Sums calculated using double
+sum up = 21.3716
+sum down = 21.3716

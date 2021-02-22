@@ -1,0 +1,66 @@
+-----Testing of functions from exercise 'Komplex'-----
+Testing komplex_set(), using komplex_print(), by initiallizing a and b as
+a =(1,2)
+b =(3,4)
+
+Testing komplex_add() and komplex_equal()
+----------------------------------------------------
+a + b should be   = (4,6)
+a + b is actually = (4,6)
+Test 'add' passed.
+
+Testing komplex_sub()
+----------------------------------------------------
+a - b should be   = (-2,-2)
+a - b is actually = (-2,-2)
+Test 'sub' passed. 
+
+Testing komplex_mul()
+----------------------------------------------------
+a * b should be   = (-5,10)
+a * b is actually = (-5,10)
+Test 'mul' passed.
+
+Testing komplex_div()
+----------------------------------------------------
+a / b should be   = (0.44,0.08)
+a / b is actually = (0.44,0.08)
+Test 'div' passed.
+
+Testing komplex_conj()
+----------------------------------------------------
+conj(a) should be   = (1,-2)
+conj(a) is actually = (1,-2)
+Test 'conj' passed.
+
+Testing komplex_conj()
+----------------------------------------------------
+|a| should be   = 2.23607
+|a| is actually = 2.23607 
+Test 'abs' passed.
+
+Testing komplex_exp()
+----------------------------------------------------
+exp(a) should be    = (-1.1312,2.47173)
+exp(a) is actually  = (-1.1312,2.47173)
+Test 'exp' passed.
+
+Testing komplex_sin()
+----------------------------------------------------
+sin(a) should be    = (3.16578,1.9596)
+sin(a) is actually  = (3.16578,1.9596)
+Test 'sin' passed.
+
+Testing komplex_cos()
+----------------------------------------------------
+cos(a) should be    = (2.03272,-3.0519)
+cos(a) is actually  = (2.03272,-3.0519)
+Test 'cos' passed.
+
+Testing komplex_sqrt()
+----------------------------------------------------
+sqrt(a) should be    = (1.27202,0.786151)
+sqrt(a) is actually  = (1.27202,0.786151)
+Test 'sqrt' passed.
+
+-----Done! All functions are working properly!-----
