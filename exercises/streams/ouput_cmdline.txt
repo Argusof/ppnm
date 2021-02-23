@@ -1,0 +1,5 @@
+argument number 1 = 1	sin(1)=0.841471	cos(1)=0.540302
+argument number 2 = 2	sin(2)=0.909297	cos(2)=-0.416147
+argument number 3 = 3	sin(3)=0.14112	cos(3)=-0.989992
+argument number 4 = 4	sin(4)=-0.756802	cos(4)=-0.653644
+argument number 5 = 5	sin(5)=-0.958924	cos(5)=0.283662
