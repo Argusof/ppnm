@@ -1,0 +1,17 @@
+set terminal png
+set output "$@"
+set key top right
+set tics in
+set xlabel "Time in days"
+set ylabel "Percent activity"
+set title "Radioactive decay: fit to data"
+set output "fit.png"
+load "fit.plt"
+f(x)=a*exp(lambda*x)
+g(x)=dap*exp(dlambdap*x)
+h(x)=dam*exp(dlambdam*x)
+plot \
+"data.txt" using 1:2:3 with errorbars col MidnightBlue title "Data points" \
+,f(x) with line lw 2 col BrickRed title "$a*exp(-\lambda*t)$"\
+,g(x) with line lw 1 col Black linetype 2 title "+ Error"\
+,h(x) with line lw 1 col Black linetype 2 title "- Error"\

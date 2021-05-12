@@ -1,0 +1,16 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "$x$"
+set ylabel "$\cos(x)$"
+set title "Cubic interpolation"
+set output "cubicPlot.png"
+plot \
+"cubicOutputDataFile.txt" using 1:2 with line lw 6 col MidnightBlue title "Cubic Interpolant" \
+,"cubicOutputDataFile.txt" using 1:3 with line lw 6 col BrickRed title "Integrated cubic Interpolant" \
+,"cubicOutputDataFile.txt" using 1:4 with line lw 6 col Black title "Differentiated cubic Interpolant" \
+,"cubicOutputDataFile.txt" using 1:5 with line lw 2 col SkyBlue title "GSL cubic Interpolant" \
+,"cubicOutputDataFile.txt" using 1:6 with line lw 2 col BurntOrange title "GSL Integrated cubic Interpolant" \
+,"cubicOutputDataFile.txt" using 1:7 with line lw 2 col Grey title "GSL Differentiated cubic Interpolant" \
+,"cos_tabulated_20.txt" using 1:2 with points col Black pointtype 1 title "Tabulated data"\

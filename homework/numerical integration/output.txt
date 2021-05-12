@@ -1,0 +1,142 @@
+_______________________________________________________________________
+
+A) Recursive adaptive integrator (Error extimate from part C) included)
+Testing routine on different integrals; 
+
+∫_0^1 √(x) dx = 2/3 = 0.666667
+
+Numerical integration yields  : 0.6669539090546550141880289
+Error goal               : 0.001666666666666666556800847
+Actual error             : 0.0002872423879883845287963595
+Computed error estimate  : 0.0007716487114193329444056246
+Called function 16 times
+
+∫_0^1 4√(1-x²) dx = π = 3.14159
+
+Numerical integration yields  : 3.141834578027267621536112
+Error goal               : 0.004141592653589792893953359
+Actual error             : 0.0002419244374745055381481507
+Computed error estimate  : 0.002511826016330469951709503
+Called function 28 times
+
+_______________________________________________________________________
+
+B) Open quadrature with Clenshaw–Curtis variable transformation 
+Tested on different integrals:
+
+
+∫_0^1 1/√(x) dx = 2
+
+
+With Clenshaw Curtis  : 1.999992010464322511609225
+Error goal               : 0.003000000000000000062450045
+Actual error             : 7.989535677488390774669824e-06
+Computed error estimate  : 0.002151820567206280676586516
+Called function 16 times
+
+
+Without Clenshaw Curtis  : 1.999961500078048626249938
+Error goal               : 0.003000000000000000062450045
+Actual error             : 3.849992195137375006197544e-05
+Computed error estimate  : 0.001305726130353901393021943
+Called function 8572 times
+
+
+--------------------------------------------
+
+∫_0^1 ln(x)/√(x) dx = -4 
+
+
+With Clenshaw Curtis  : -3.999873856461407140017172
+Error goal               : 0.005000000000000000104083409
+Actual error             : 0.0001261435385928599828275765
+Computed error estimate  : 0.003736058825433403920296405
+Called function 96 times
+
+
+Without Clenshaw Curtis  : -3.999917058999152175147174
+Error goal               : 0.005000000000000000104083409
+Actual error             : 8.29410008478248528263066e-05
+Computed error estimate  : 0.003656259147616781456785473
+Called function 8604 times
+
+--------------------------------------------
+
+∫_0^1 4√(1-x²) dx = π = 3.14159
+
+
+With Clenshaw Curtis  : 3.141576386483500016311154
+Error goal               : 0.004141592653589792893953359
+Actual error             : 1.626710629309968680900056e-05
+Computed error estimate  : 0.00342212475666156404688345
+Called function 44 times
+
+
+Without Clenshaw Curtis  : 3.141834578027267621536112
+Error goal               : 0.004141592653589792893953359
+Actual error             : 0.0002419244374745055381481507
+Computed error estimate  : 0.002511826016330469951709503
+Called function 28 times
+
+
+With gsl Clenshaw Curtis  : 3.141592971498682107522882
+Error goal               : 0.004141592653589792893953359
+Actual error             : 3.179088889915249183104606e-07
+Computed error estimate  : 0.001825312538654571409280081
+Called function 135 times
+
+_______________________________________________________________________
+
+C) Infinite limits 
+Tested on different integrals:
+
+
+∫_-inf^inf exp(-x²) dx = √π = 1.77245
+Numerical integration yields  : 1.772690100234881604990278
+Error goal               : 0.002772453850905515996411177
+Actual error             : 0.0002362493293657230708504358
+Computed error estimate  : 0.001949670170547971280450295
+Called function 72 times
+
+
+With gsl this yields  : 1.77245385090673734929112
+Error goal               : 0.002772453850905515996411177
+Actual error             : 1.22146737169259722577408e-12
+Computed error estimate  : 4.316364671564515420598696e-06
+Called function 0 times
+
+gsl routine cannot return number of calls
+--------------------------------------------
+
+∫_0^inf 1/(1+x²) dx = π/2 = 1.5708
+Numerical integration yields  : 1.570872364103686802394577
+Error goal               : 0.002570796326794896891065889
+Actual error             : 7.60373087902443955954368e-05
+Computed error estimate  : 0.001148174733439616401753369
+Called function 24 times
+
+
+With gsl this yields  : 1.57079632684677839016274
+Error goal               : 0.002570796326794896891065889
+Actual error             : 5.188183216375819029053673e-11
+Computed error estimate  : 0.0001958561554299810092243106
+Called function 0 times
+
+gsl routine cannot return number of calls
+--------------------------------------------
+
+∫_-inf^0 1/(1+x²) dx = π/2 = 1.5708
+Numerical integration yields  : 1.570872364103686802394577
+Error goal               : 0.002570796326794896891065889
+Actual error             : 7.60373087902443955954368e-05
+Computed error estimate  : 0.001148174733439588646177754
+Called function 24 times
+
+
+With gsl this yields  : 1.57079632684677839016274
+Error goal               : 0.002570796326794896891065889
+Actual error             : 5.188183216375819029053673e-11
+Computed error estimate  : 0.0001958561554299810092243106
+Called function 0 times
+
+gsl routine cannot return number of calls

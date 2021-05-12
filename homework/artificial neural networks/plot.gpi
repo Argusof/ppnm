@@ -1,0 +1,12 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "$x$"
+set ylabel "$\cos(x)$"
+set title "Cosine"
+set output "plot.png"
+plot \
+"data.txt" using 1:2 with line lw 2 col MidnightBlue title "Neural network interpolation"\
+,"data.txt" using 1:3 with line lw 2 col BrickRed title "cos(x)"\
+,"cos_tabulated_20.txt" using 1:2 with points pointtype 2 col Black title "Exact values"\

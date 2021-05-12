@@ -1,0 +1,25 @@
+
+---------------------PART A---------------------
+Finding roots of 1+(x-a)^2+(y-b)^2
+
+The initial value is (x, y) = (4, 10)
+The minimum should be at (x, y) = (a, b) = (6, 13)
+The minimum is found at (x, y) = (6, 13),
+
+
+Finding roots of the Rosenbrock valley function
+
+The initial value is (x, y) = (0.5, 0.5)
+The minimum is found at (x, y) = (1, 1)
+
+---------------------PART B---------------------
+(Un)bound states of the hydrogen atom
+
+Energies found by root-finding
+   Unbound: -0.499978
+   Bound: -0.502899
+
+---------------------PART C---------------------
+Better boundary conditions for the hydrogen atom
+
+See conv.png

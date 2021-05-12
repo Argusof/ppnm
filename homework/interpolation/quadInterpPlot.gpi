@@ -1,0 +1,16 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "$x$"
+set ylabel "$\cos(x)$"
+set title "Quadradic interpolation"
+set output "quadPlot.png"
+plot \
+"quadOutputDataFile.txt" using 1:2 with line lw 6 col MidnightBlue title "Quad Interpolant" \
+,"quadOutputDataFile.txt" using 1:3 with line lw 6 col BrickRed title "Integrated Quad Interpolant" \
+,"quadOutputDataFile.txt" using 1:4 with line lw 6 col Black title "Differentiated Quad Interpolant" \
+,"quadOutputDataFile.txt" using 1:5 with line lw 2 col SkyBlue title "GSL Quad Interpolant" \
+,"quadOutputDataFile.txt" using 1:6 with line lw 2 col BurntOrange title "GSL Integrated Quad Interpolant" \
+,"quadOutputDataFile.txt" using 1:7 with line lw 2 col Grey title "GSL Differentiated Quad Interpolant" \
+,"cos_tabulated_20.txt" using 1:2 with points col Black pointtype 1 title "Tabulated data"\

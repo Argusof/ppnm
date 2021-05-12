@@ -1,0 +1,11 @@
+set terminal png
+set output "$@"
+set tics in
+set xlabel "Number of points"
+set ylabel "Error"
+set title "Error scaling"
+set output "errorScaling.png"
+set log y
+plot \
+"errors.txt" using 1:2 with line lw 6 col MidnightBlue title "Pseudo random" \
+,"errors.txt" using 1:3 with line lw 6 col BrickRed title "Quasi random"

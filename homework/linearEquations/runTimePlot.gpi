@@ -1,0 +1,11 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "Matrix Size"
+set ylabel "Run Time (s)"
+set title "Run time of QR decomposition"
+set output "runTimePlot.png"
+plot \
+"outputFile.txt" using 1:2 with line lw 6 col MidnightBlue title "my QR decomp" \
+,"outputFile.txt" using 1:3 with line lw 6 col SeaGreen title "$O(N^3)$" \

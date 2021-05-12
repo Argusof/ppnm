@@ -1,0 +1,14 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "$x$"
+set ylabel "$\cos(x)$"
+set title "Linear interpolated"
+set output "linPlot.png"
+plot \
+"linOutputDataFile.txt" using 1:2 with line lw 6 col MidnightBlue title "Lin Interpolant" \
+,"linOutputDataFile.txt" using 1:3 with line lw 6 col BrickRed title "Lin Interpolant integral"\
+,"linOutputDataFile.txt" using 1:4 with line lw 2 col SkyBlue title "gsl interpolant"\
+,"linOutputDataFile.txt" using 1:5 with line lw 2 col BurntOrange title "gsl interpolant integral"\
+,"cos_tabulated_20.txt" using 1:2 with points col Black pointtype 1 title "Tabulated data"\

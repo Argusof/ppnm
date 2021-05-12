@@ -1,0 +1,4 @@
+
+Integrating the function from 0 to 4.3 gives -0.89144
+Using gsl this yields -0.916166
+

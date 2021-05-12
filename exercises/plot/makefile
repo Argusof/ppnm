@@ -31,7 +31,7 @@ pyx_gamma.png: output_gamma.txt input_gamma.txt
 	echo '\
 	set terminal png;\
 	set output "$@";\
-	set key top left;\
+	set key bottom right;\
 	set tics in;\
 	set xlabel "x";\
 	set ylabel "gamma(x)";\

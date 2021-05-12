@@ -1,0 +1,1 @@
+A) The integral of ln(x)/sqrt(x) = -4 (numerically)

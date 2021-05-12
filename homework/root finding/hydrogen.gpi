@@ -1,0 +1,11 @@
+set terminal png
+set output "$@"
+set key top right
+set tics in
+set xlabel "r [Bohr radii]"
+set ylabel "Wave function"
+set title "Hydrogen solution"
+set output "hydrogen.png"
+plot \
+"hydrogen.txt" using 1:2 with line lw 6 col MidnightBlue title "Numerical solution"\
+,"hydrogen.txt" using 1:4 with line lw 2 col BrickRed title "Analytical solution"\

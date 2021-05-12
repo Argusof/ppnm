@@ -1,0 +1,12 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "x"
+set ylabel "y"
+set title "Special case of the tree body problem"
+set output "threeBody.png"
+plot \
+"threeBodyOutputFile.txt" using 2:3 with line lw 6 col MidnightBlue title "$m_1$" \
+,"threeBodyOutputFile.txt" using 4:5 with line lw 4 col BrickRed title "$m_2$" \
+,"threeBodyOutputFile.txt" using 6:7 with line lw 2 col SeaGreen title "$m_3$" \

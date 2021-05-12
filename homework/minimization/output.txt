@@ -1,0 +1,51 @@
+--------------------- PART A ---------------------
+Testing minimization routine on 1+(x-a)^2+(y-b)^2 
+The initial value was (x,y) = (4,10)
+and actual the minimum is at (x,y) = (6,13)
+
+number of steps = 9
+number of scales = 8 
+number of resets = 0 
+function value = 1.0e+00
+
+The found minimum is (6,13)
+____________________________________________________
+Testing minimization routine on the Rosenbrock valley function
+The initial value was (x,y) = (0,0)
+
+number of steps = 10000
+number of scales = 7297 
+number of resets = 2703 
+function value = 1.5e-05
+
+The found minimum is (0.996187,0.992362)
+____________________________________________________
+Testing minimization routine on the Himmelblau function
+The initial value was (x,y) = (1,1)
+and actual the minima are at (x,y) = (3,2), (-2.80,3.13), (-3.78,-3.28), (3.58,-1.84)
+
+number of steps = 10000
+number of scales = 9997 
+number of resets = 3 
+function value = 9.7e-02
+
+The found minimum is (-2.75,3.13218)
+--------------------- PART B ---------------------
+Fitting to the Higgs particle discovery data
+
+The initial value was (m,Γ,A) = (126.3, 2.5, 9)
+
+number of steps = 10000
+number of scales = 9997 
+number of resets = 3 
+function value = 2.7e+01
+
+The found minimum is (m,Γ,A) = (125.979, 3.15949, 13.8183)
+--------------------- PART C ---------------------
+Implementing the downhill simplex method
+and testing on 1+(x-a)^2+(y-b)^2
+
+The initial values are { (x_0, y_0), (x_1, y_1), (x_2, y_2) } = { (4, 10), (2, 2), (-3, 1) }
+Number of steps = 55
+The actual minimum is at: (x, y) = (6, 13)
+and the found minimum, is at:  (x, y) = (6, 13)

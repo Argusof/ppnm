@@ -1,0 +1,12 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "time [days]"
+set ylabel "number of people"
+set title "SIR model with $T_c = 2.5$ and $T_r = 25$"
+set output "SIR.png"
+plot \
+"SIRoutputFile.txt" using 1:2 with line lw 6 col MidnightBlue title "Susceptible, $S_0 = 5122381$" \
+,"SIRoutputFile.txt" using 1:3 with line lw 6 col BrickRed title "Infected, $I_0 = 11162$" \
+,"SIRoutputFile.txt" using 1:4 with line lw 6 col SeaGreen title "Removed, $R_0 = 674637$" \

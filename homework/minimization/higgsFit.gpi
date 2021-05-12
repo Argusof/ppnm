@@ -1,0 +1,11 @@
+set terminal png
+set output "$@"
+set key top right
+set tics in
+set xlabel "E [GeV]"
+set ylabel "$\sigma$"
+set title "Higgs particle"
+set output "higgsFit.png"
+plot \
+"higgsFit.txt" using 1:4 with line lw 2 col BrickRed title "Fit"\
+,"higgsFit.txt" using 1:2:3 with yerrorbars col Black pointtype 2 title "Data points"\
