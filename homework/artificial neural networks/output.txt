@@ -1,8 +1,0 @@
---------------------- PART A ---------------------
-Neural network implemented and tested on cos(x) - see plot.png
-
-number of steps = 10000
-number of scales = 520 
-number of resets = 9480 
-function value = 2.2e-03
-
