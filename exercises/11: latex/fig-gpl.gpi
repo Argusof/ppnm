@@ -1,0 +1,7 @@
+set term latex rotate
+set size 0.6,0.6
+set xlabel "$x$"
+set ylabel "$y$"
+set output "fig-gpl.tex"
+plot [0:5] "out.data.txt" using 1:2 with lines title "mygamma" \
+,"out.data.txt" using 1:3 with lines title "tgamma"

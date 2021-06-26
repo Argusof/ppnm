@@ -131,9 +131,13 @@ int main(){
 	printf("sum down = %f\n",sum_down_float);
 	
 	// ii) Explain the difference 
-	
+  printf("The differences are due to the noncommutative nature, and lack of precision.\n");
+  printf("At some point the sum will be larger than the precision, such that when we attempt to add another float, we'll get a rounding error. \n");
+  printf("In the backward sum we are trying to sum small numbers starting from a large number, and the sum terminates very early. \n");
+
 	// iii) Does this sum converge as a func. of max?
 	
+  printf("Does this sum converge as function of max? No, since we'll get a rounding error \n\n");
 	// iv) Calculate sums using doubles
 	printf("\nSums calculated using double\n");
 	
@@ -147,7 +151,7 @@ int main(){
 	
 	/////// Exercise 3 ///////
 	
-	// See function and header files.
+	printf("For exc. 3, See function and header files.\n");
 	
 	return 0;
 }

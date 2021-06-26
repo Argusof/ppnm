@@ -34,7 +34,13 @@ e=7.290399064e-4951 (do)
 Sums calculated using float
 sum up = 15.403683
 sum down = 18.807919
+The differences are due to the noncommutative nature, and lack of precision.
+At some point the sum will be larger than the precision, such that when we attempt to add another float, we'll get a rounding error. 
+In the backward sum we are trying to sum small numbers starting from a large number, and the sum terminates very early. 
+Does this sum converge as function of max? No, since we'll get a rounding error 
+
 
 Sums calculated using double
 sum up = 21.3716
 sum down = 21.3716
+For exc. 3, See function and header files.

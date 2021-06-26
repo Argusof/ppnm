@@ -27,17 +27,13 @@ int main(int argc, char const *argv[]) {
   print_matrix(dim, eigVecMat, "Eigenvectors V:");       // Print computed eigenvectors
   print_matrix(dim, eigValMat, "Eigenvalues U:");        // Print computed eigenvalues
 
-  print_matrix(dim, matrix, "Matrix D:");                // Print original diagonalized matrix
+  print_matrix(dim, matrix, "Diagonal matrix D:");      // Print original diagonalized matrix
   // Test
   gsl_matrix* tmp = gsl_matrix_alloc(dim, dim);
   gsl_matrix* testIdentityV = gsl_matrix_alloc(dim, dim);
   gsl_matrix* testIdentityU = gsl_matrix_alloc(dim, dim);
   gsl_matrix* testDiagonal = gsl_matrix_alloc(dim, dim);
   gsl_matrix* testMat = gsl_matrix_alloc(dim, dim);
-
-  //gsl_blas_dgemm(CblasNoTrans, CblasNoTrans, 1.0, matrix, eigVecMat, 0.0, tmp);
-  //gsl_blas_dgemm(CblasTrans, CblasNoTrans, 1.0, eigVecMat, tmp, 0.0, testDiagonal);
-  //print_matrix(dim, testDiagonal, "Diagonal test, V^T * A * V = D:");
 
   gsl_blas_dgemm(CblasTrans, CblasNoTrans, 1.0, eigVecMat, eigVecMat, 0.0, testIdentityV);
   print_matrix(dim, testIdentityV, "Identity test, V^T * V = 1:");

@@ -32,4 +32,4 @@ $(EXECS): $(OBJECTS)
 
 .PHONEY:clean
 clean:
-	$(RM) input.txt out* error.txt stdio cmdopt cmdline input fileread
+	$(RM) out* error.txt stdio cmdopt cmdline input fileread

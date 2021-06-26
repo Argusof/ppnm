@@ -32,18 +32,6 @@ void jacobiMultiply_left(gsl_matrix* matrix, int firstId, int secondId, double a
 	}
 }
 
-void GivensRotation(gsl_matrix* matrix, int firstId, int secondId, double angle){ //A->A'=G^T A
-	double c = cos(angle);
-	double s = sin(angle);
-
-	for(int col = 0; col < matrix->size2; col++){
-		double new_apj =  c*gsl_matrix_get(matrix,firstId,col) + s*gsl_matrix_get(matrix,secondId,col);
-		double new_aqj = -s*gsl_matrix_get(matrix,firstId,col) + c*gsl_matrix_get(matrix,secondId,col);
-		gsl_matrix_set(matrix,firstId,col,new_apj);
-		gsl_matrix_set(matrix,secondId,col,new_aqj);
-	}
-}
-
 
 void jacobiSVD(gsl_matrix* matrix, gsl_matrix* eigVecMat, gsl_matrix* eigValMat){
 	int maxIt = 1e5;
@@ -79,15 +67,14 @@ void jacobiSVD(gsl_matrix* matrix, gsl_matrix* eigVecMat, gsl_matrix* eigValMat)
       			changed = 1;
 						ItId++;
 
-						// Givens rotation to get symmetric matrix A'
-						//GivensRotation(matrix, firstId, secondId, -GivensAngle);
-						jacobiMultiply_left(matrix, firstId, secondId, -GivensAngle); 
+						// Givens rotation to get symmetric matrix A'. This is the same as applying the
+						// Jacobian matrix from the left, however, with the angle defined differently
+						jacobiMultiply_left(matrix, firstId, secondId, -GivensAngle);
 						// A'←J^T*A'*J
 						jacobiMultiply_right(matrix, firstId, secondId, JacobiAngle);
       			jacobiMultiply_left(matrix, firstId, secondId, -JacobiAngle);
 
 						// U-> UGJ
-						//GivensRotation(eigValMat, firstId, secondId, GivensAngle);
 						jacobiMultiply_right(eigValMat, firstId, secondId, GivensAngle);
 						jacobiMultiply_right(eigValMat, firstId, secondId, JacobiAngle);
 
